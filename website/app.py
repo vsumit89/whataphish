@@ -15,13 +15,11 @@ def Predict():
     url = request.form.get("url")
     score = get_prediction(url)
     if score==1:
-        predict = False
-    else:
-        predict = True
-    if predict:
-        return render_template("danger.html")
-    else:
         return render_template("legit.html")
+    else:
+        return render_template("danger.html")
+
+        
 
 
 
